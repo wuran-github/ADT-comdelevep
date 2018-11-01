@@ -24,7 +24,7 @@
     <ClInclude Include="IDLL.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="FirstDLL.h">
+    <ClInclude Include="SecondDLL.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -32,13 +32,13 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="COMDLL.cpp">
+    <ClCompile Include="DLL2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="FirstDLL.cpp">
+    <ClCompile Include="SecondDLL.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
