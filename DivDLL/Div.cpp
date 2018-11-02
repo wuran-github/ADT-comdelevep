@@ -8,7 +8,7 @@ Div::Div()
 
 const char * Div::GetICONPath()
 {
-	return "H:/Lession/ico/ico/t6.ico";
+	return "./ico/t6.ico";
 }
 
 const char * Div::GetText()

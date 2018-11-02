@@ -8,7 +8,7 @@ Sub::Sub()
 
 const char * Sub::GetICONPath()
 {
-	return "H:/Lession/ico/ico/t4.ico";
+	return "./ico/t4.ico";
 }
 
 const char * Sub::GetText()

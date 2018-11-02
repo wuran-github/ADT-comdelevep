@@ -8,7 +8,7 @@ Add::Add()
 
 const char * Add::GetICONPath()
 {
-	return "H:/Lession/ico/ico/t3.ico";
+	return "./ico/t3.ico";
 }
 
 const char * Add::GetText()

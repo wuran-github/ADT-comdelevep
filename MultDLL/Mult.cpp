@@ -8,7 +8,7 @@ Mult::Mult()
 
 const char * Mult::GetICONPath()
 {
-	return "H:/Lession/ico/ico/t5.ico";
+	return "./ico/t5.ico";
 }
 
 const char * Mult::GetText()
