@@ -3,6 +3,7 @@
 #include <io.h>
 #include <qdir.h>
 #include "IDLL.h"
+#include "ICalcDLL.h"
 COMGUI::COMGUI(QWidget *parent)
 	: QMainWindow(parent)
 {
@@ -22,19 +23,41 @@ void COMGUI::CreateUI()
 		if (hdll != NULL) {
 			GetDLL dfun = (GetDLL)::GetProcAddress(hdll, "GetInstance");
 			if (dfun != NULL) {
-				IDLL* dll = (*dfun)();
+				//IDLL* dll = (*dfun)();
+				//if (dll != NULL) {
+
+				//	//MyAction *q = new MyAction(dll->GetText(), this);
+				//	q->setStatusTip(dll->GetTip());
+				//	q->setIconText(dll->GetText());
+				//	q->setIcon(QIcon(dll->GetICONPath()));
+				//	actionList.push_back(q);
+				//	ui.mainToolBar->addAction(q);
+				//	q->dll = dll;
+				//	auto tt=QObject::connect(q, SIGNAL(triggered()), q, SLOT(Execute()));
+
+				//	
+				//}
+
+				//CALC
+				ICalcDLL* dll = (*dfun)();
 				if (dll != NULL) {
 
-					QAction *q = new QAction(dll->GetText(), this);
+					MyAction *q = new MyAction(dll->GetText(), this);
 					q->setStatusTip(dll->GetTip());
 					q->setIconText(dll->GetText());
 					q->setIcon(QIcon(dll->GetICONPath()));
 					actionList.push_back(q);
 					ui.mainToolBar->addAction(q);
+					q->calcDLL = dll;
+					q->Num1 = ui.Num1;
+					q->Num2 = ui.Num2;
+					q->result = ui.result;
+					auto tt=QObject::connect(q, SIGNAL(triggered()), q, SLOT(Calc()));
+
 					
 				}
 			}
-			::FreeLibrary(hdll);
+			
 
 		}
 	}

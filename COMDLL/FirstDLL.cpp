@@ -1,6 +1,10 @@
+
+
 #include "stdafx.h"
 #include "FirstDLL.h"
+#include "MessageDLL.h"
 
+#pragma comment(lib,"H:/Lession/code/newcpp/COMDevelop/x64/Debug/QTDLL.lib")
 
 FirstDLL::FirstDLL()
 {
@@ -23,7 +27,8 @@ const char * FirstDLL::GetTip()
 
 void FirstDLL::Execute()
 {
-	std::cout << "this is DLL1" <<std::endl;
+	MessageDLL md;
+	md.Alert(this->GetTip());
 }
 
 

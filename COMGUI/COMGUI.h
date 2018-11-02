@@ -3,6 +3,7 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_COMGUI.h"
 #include <string>
+#include "MyAction.h"
 class COMGUI : public QMainWindow
 {
 	Q_OBJECT
@@ -13,7 +14,7 @@ public:
 	~COMGUI();
 private:
 	Ui::COMGUIClass ui;
-	std::vector<QAction*> actionList;
+	std::vector<MyAction*> actionList;
 private:
 	QStringList GetFiles();
 };

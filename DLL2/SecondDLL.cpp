@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "SecondDLL.h"
+#include "MessageDLL.h"
 
+#pragma comment(lib,"H:/Lession/code/newcpp/COMDevelop/x64/Debug/QTDLL.lib")
 
 SecondDLL::SecondDLL()
 {
@@ -23,6 +25,8 @@ const char * SecondDLL::GetTip()
 
 void SecondDLL::Execute()
 {
+	MessageDLL md;
+	md.Alert(this->GetTip());
 }
 
 

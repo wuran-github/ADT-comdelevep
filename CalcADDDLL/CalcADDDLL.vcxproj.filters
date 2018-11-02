@@ -21,13 +21,10 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="IDLL.h">
+    <ClInclude Include="Add.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="SecondDLL.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="MessageDLL.h">
+    <ClInclude Include="ICalcDLL.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,13 +32,13 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="DLL2.cpp">
+    <ClCompile Include="CalcADDDLL.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="SecondDLL.cpp">
+    <ClCompile Include="Add.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
